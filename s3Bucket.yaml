@@ -7,10 +7,9 @@ Description : "Create S3 bucket"
 Resources:
     S3Bucket:
       Type : AWS::S3::Bucket
-      Properties:
-          BucketName : "SampleCPCF541"
+ 
 
 
 Outputs:
     BucketName:
-        Value : !Ref S3BucketName
+        Value : !Ref S3Bucket
