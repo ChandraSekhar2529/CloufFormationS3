@@ -6,7 +6,7 @@ Parameters:
     S3BucketName:
         Type : String
         Description : Enter the bucket Name
-        MinLength : 3
+        Default : chandra74123
 
 Resources:
     S3Bucket:
