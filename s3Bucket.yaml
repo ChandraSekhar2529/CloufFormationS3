@@ -2,17 +2,13 @@ AWSTemplateFormatVersion: "2010-09-09"
 Description : "Create S3 bucket"
 
 
-Parameters:
-    S3BucketName:
-        Type : String
-        Description : Enter the bucket Name
-        MinLength : 3
+
 
 Resources:
     S3Bucket:
       Type : AWS::S3::Bucket
       Properties:
-          BucketName : !Ref S3BucketName
+          BucketName : "SampleCPCF541"
 
 
 Outputs:
