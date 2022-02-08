@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description : Creation of Ec2 instance
+
+Properties :
+    EC2InstanceType:
+        Type : String
+        Default : t2micro
+        AllowedValues :
+            - t2.micro
+            - m1.small
+            - m1.large
+        Description : Select the instance type
+
+Resources :
+      MyEc2Instance :
+            Type : AWS::EC2::Instance
+            Properties :
+                ImageId : ami-07f179dc333499419
+                InstanceType : !Ref Ec2IntanceType
+
+# !Select [0, !Cidr [!GetAtt VPC.CidrBlock,1,8]]
+#Fn::Cidr : [ipBlock,count,cidrBits]
